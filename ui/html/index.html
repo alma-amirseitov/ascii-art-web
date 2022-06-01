@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/style.css" rel="stylesheet">
+    <title>Ascii-Art-Web</title>
+</head>
+<body>
+  <header class="header">
+    <h1>ASCII-Art-Web</h1>
+  </header>
+  <div class="center">
+    <form action="/ascii-art" method="POST">
+      <div class="center">
+        <table>
+            <th>Style</th>
+            <th>Text</th>
+            <tr>
+              <td>
+                <input type="radio" name="style" id="standard" value="standard"><label for="standard">Standard</label><br>
+                <input type="radio" name="style" id="shadow" value="shadow"><label for="shadow">Shadow</label><br>
+                <input type="radio" name="style" id="thinkertoy" value="thinkertoy"><label for="thinkertoy">Thinkertoy</label>
+              </td>
+              <td>
+                <textarea name="text" id="text"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input type="submit" value="submit" />
+              </td>
+            </tr>
+        </table>
+      </div>
+    </form>
+    
+    <div class="display">
+      <pre>{{ .Out }}<pre>
+    </div>
+  </div>
+</body>
+</html>
